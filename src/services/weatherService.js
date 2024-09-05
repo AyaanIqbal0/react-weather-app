@@ -11,7 +11,8 @@ const getWeatherData = (infoType, searchParams) => {
 };
 
 const iconUrlFromCode = (icon) =>
-  `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
 
 const formatToLocalTime = (
   secs,
