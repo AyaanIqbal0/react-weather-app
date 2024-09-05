@@ -36,7 +36,7 @@ const TempAndDetails = ({
       id: 3,
       Icon: FiWind,
       title: "Wind",
-      value: `${speed.toFixed()} ${units === "metric" ? "km/hr" :"m/s"}`,
+      value: `${speed.toFixed()} ${units === "metric" ? "km/hr" : "m/s"}`,
     },
   ];
 
@@ -57,13 +57,13 @@ const TempAndDetails = ({
       id: 3,
       Icon: MdKeyboardArrowUp,
       title: "High",
-      value: `${temp_max.toFixed()}°`
+      value: `${temp_max.toFixed()}°`,
     },
     {
       id: 4,
       Icon: MdKeyboardArrowDown,
       title: "Low",
-      value: `${temp_min.toFixed()}°`
+      value: `${temp_min.toFixed()}°`,
     },
   ];
 
@@ -73,21 +73,21 @@ const TempAndDetails = ({
         <p>{details}</p>
       </div>
 
-      <div className="flex flex-row items-center justify-between py-3">
+      <div className="flex flex-col md:flex-row items-center justify-between py-3">
         <img
           src={icon}
           alt="weather icon"
-          className="w-20"
+          className="w-20 mb-4 md:mb-0"
         />
         <p className="text-5xl">{`${temp.toFixed()}°`}</p>
-        <div className="flex flex-col space-y-3 items-start">
+        <div className="flex flex-col space-y-3 items-start md:items-center">
           {verticalDetails.map(({ id, Icon, title, value }) => (
             <div
               key={id}
               className="flex font-light text-sm items-center justify-center"
             >
               <Icon size={18} className="mr-1" />
-              {`${title}:`}: <span className="font-medium ml-1"> {value}</span>
+              {`${title}:`} <span className="font-medium ml-1"> {value}</span>
             </div>
           ))}
         </div>
@@ -95,10 +95,10 @@ const TempAndDetails = ({
 
       <div className="flex flex-row items-center justify-center space-x-10 text-sm py-3">
         {horizontalDetails.map(({ id, Icon, title, value }) => (
-          <div key={id} className=" flex flex-row items-center">
+          <div key={id} className="flex flex-row items-center">
             <Icon size={30} />
             <p className="font-light ml-1">
-              {`${title}:`}: <span className="font-medium ml-1"> {value}</span>
+              {`${title}:`} <span className="font-medium ml-1"> {value}</span>
             </p>
           </div>
         ))}

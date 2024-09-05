@@ -1,16 +1,16 @@
-const Forecast = ({title,data}) => {
+const Forecast = ({ title, data }) => {
   return (
     <div>
-      <div className="flex items-center justify-start mt-6 ">
+      <div className="flex items-center justify-start mt-6">
         <p className="font-medium uppercase">{title}</p>
       </div>
-      <hr className="my-1 " />
+      <hr className="my-1" />
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between">
         {data.map((d, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center mb-4 w-1/4 sm:w-1/3 xs:w-1/2"
           >
             <p className="font-light text-sm">{d.title}</p>
             <img
