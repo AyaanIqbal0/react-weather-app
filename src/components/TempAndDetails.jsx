@@ -70,7 +70,7 @@ const TempAndDetails = ({
   return (
     <div>
       <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
-        <p>{details}</p>
+        <p className="text-lg md:text-xl">{details}</p>
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between py-3">
@@ -79,12 +79,12 @@ const TempAndDetails = ({
           alt="weather icon"
           className="w-20 mb-4 md:mb-0"
         />
-        <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+        <p className="text-4xl md:text-5xl">{`${temp.toFixed()}°`}</p>
         <div className="flex flex-col space-y-3 items-start md:items-center">
           {verticalDetails.map(({ id, Icon, title, value }) => (
             <div
               key={id}
-              className="flex font-light text-sm items-center justify-center"
+              className="flex font-light text-sm md:text-base items-center justify-center"
             >
               <Icon size={18} className="mr-1" />
               {`${title}:`} <span className="font-medium ml-1"> {value}</span>
@@ -93,11 +93,11 @@ const TempAndDetails = ({
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-10 text-sm py-3">
+      <div className="grid grid-cols-2 gap-6 text-sm py-3 md:grid-cols-4 md:text-base">
         {horizontalDetails.map(({ id, Icon, title, value }) => (
-          <div key={id} className="flex flex-row items-center">
-            <Icon size={30} />
-            <p className="font-light ml-1">
+          <div key={id} className="flex flex-row items-center justify-center">
+            <Icon size={24} className="mr-2" />
+            <p className="font-light text-center">
               {`${title}:`} <span className="font-medium ml-1"> {value}</span>
             </p>
           </div>

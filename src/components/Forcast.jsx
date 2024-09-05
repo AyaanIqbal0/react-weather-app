@@ -6,13 +6,13 @@ const Forecast = ({ title, data }) => {
       </div>
       <hr className="my-1" />
 
-      <div className="flex flex-wrap items-center justify-between">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {data.map((d, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center mb-4 w-1/4 sm:w-1/3 xs:w-1/2"
+            className="flex flex-col items-center justify-center mb-4"
           >
-            <p className="font-light text-sm">{d.title}</p>
+            <p className="font-light text-sm text-center">{d.title}</p>
             <img
               src={d.icon}
               alt="weather icon"
