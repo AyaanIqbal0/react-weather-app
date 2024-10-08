@@ -1,8 +1,23 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# SkyWatch
 
-Currently, two official plugins are available:
+A weather app providing real-time forecasts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+
+[Watch Video Demo](https://www.youtube.com/watch?v=uRfK3f_ev5o) <!-- Add your YouTube video link here -->
+
+## Features
+
+- Integrated OpenWeatherMap API to display weather data based on the user’s location
+- Responsive UI designed with React.js, with automatic geolocation detection
+- Displays current weather conditions and forecasts
+
+## Tech Stack
+
+- **Frontend**: React.js
+- **API**: OpenWeatherMap API
+
+## ScreenShots
+![weather3](https://github.com/user-attachments/assets/ab44bf53-e69a-4303-b547-d3f4964d1d9f)
+![weather2](https://github.com/user-attachments/assets/714dc0db-22ac-4cf7-9700-9cf92172c47f)
